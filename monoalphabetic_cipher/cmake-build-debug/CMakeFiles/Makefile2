@@ -54,45 +54,45 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/stybill/Desktop/introduction_to_information_security/homeworks/HW1-of-Introduction-to-Information-Security/caesar_cipher
+CMAKE_SOURCE_DIR = /Users/stybill/Desktop/introduction_to_information_security/homeworks/HW1-of-Introduction-to-Information-Security/monoalphabetic_cipher
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/stybill/Desktop/introduction_to_information_security/homeworks/HW1-of-Introduction-to-Information-Security/caesar_cipher/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/stybill/Desktop/introduction_to_information_security/homeworks/HW1-of-Introduction-to-Information-Security/monoalphabetic_cipher/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/HW_1.dir
+# Target rules for target CMakeFiles/monoalphabetic_cipher.dir
 
 # All Build rule for target.
-CMakeFiles/HW_1.dir/all:
-	$(MAKE) -f CMakeFiles/HW_1.dir/build.make CMakeFiles/HW_1.dir/depend
-	$(MAKE) -f CMakeFiles/HW_1.dir/build.make CMakeFiles/HW_1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/stybill/Desktop/introduction_to_information_security/homeworks/HW1-of-Introduction-to-Information-Security/caesar_cipher/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target HW_1"
-.PHONY : CMakeFiles/HW_1.dir/all
+CMakeFiles/monoalphabetic_cipher.dir/all:
+	$(MAKE) -f CMakeFiles/monoalphabetic_cipher.dir/build.make CMakeFiles/monoalphabetic_cipher.dir/depend
+	$(MAKE) -f CMakeFiles/monoalphabetic_cipher.dir/build.make CMakeFiles/monoalphabetic_cipher.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/stybill/Desktop/introduction_to_information_security/homeworks/HW1-of-Introduction-to-Information-Security/monoalphabetic_cipher/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target monoalphabetic_cipher"
+.PHONY : CMakeFiles/monoalphabetic_cipher.dir/all
 
 # Include target in all.
-all: CMakeFiles/HW_1.dir/all
+all: CMakeFiles/monoalphabetic_cipher.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/HW_1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/stybill/Desktop/introduction_to_information_security/homeworks/HW1-of-Introduction-to-Information-Security/caesar_cipher/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/HW_1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/stybill/Desktop/introduction_to_information_security/homeworks/HW1-of-Introduction-to-Information-Security/caesar_cipher/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/HW_1.dir/rule
+CMakeFiles/monoalphabetic_cipher.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/stybill/Desktop/introduction_to_information_security/homeworks/HW1-of-Introduction-to-Information-Security/monoalphabetic_cipher/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/monoalphabetic_cipher.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/stybill/Desktop/introduction_to_information_security/homeworks/HW1-of-Introduction-to-Information-Security/monoalphabetic_cipher/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/monoalphabetic_cipher.dir/rule
 
 # Convenience name for target.
-HW_1: CMakeFiles/HW_1.dir/rule
+monoalphabetic_cipher: CMakeFiles/monoalphabetic_cipher.dir/rule
 
-.PHONY : HW_1
-
-# clean rule for target.
-CMakeFiles/HW_1.dir/clean:
-	$(MAKE) -f CMakeFiles/HW_1.dir/build.make CMakeFiles/HW_1.dir/clean
-.PHONY : CMakeFiles/HW_1.dir/clean
+.PHONY : monoalphabetic_cipher
 
 # clean rule for target.
-clean: CMakeFiles/HW_1.dir/clean
+CMakeFiles/monoalphabetic_cipher.dir/clean:
+	$(MAKE) -f CMakeFiles/monoalphabetic_cipher.dir/build.make CMakeFiles/monoalphabetic_cipher.dir/clean
+.PHONY : CMakeFiles/monoalphabetic_cipher.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/monoalphabetic_cipher.dir/clean
 
 .PHONY : clean
 

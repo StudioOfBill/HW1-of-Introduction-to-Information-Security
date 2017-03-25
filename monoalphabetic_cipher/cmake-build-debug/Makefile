@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/stybill/Desktop/introduction_to_information_security/homeworks/HW1-of-Introduction-to-Information-Security/caesar_cipher
+CMAKE_SOURCE_DIR = /Users/stybill/Desktop/introduction_to_information_security/homeworks/HW1-of-Introduction-to-Information-Security/monoalphabetic_cipher
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/stybill/Desktop/introduction_to_information_security/homeworks/HW1-of-Introduction-to-Information-Security/caesar_cipher/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/stybill/Desktop/introduction_to_information_security/homeworks/HW1-of-Introduction-to-Information-Security/monoalphabetic_cipher/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/stybill/Desktop/introduction_to_information_security/homeworks/HW1-of-Introduction-to-Information-Security/caesar_cipher/cmake-build-debug/CMakeFiles /Users/stybill/Desktop/introduction_to_information_security/homeworks/HW1-of-Introduction-to-Information-Security/caesar_cipher/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/stybill/Desktop/introduction_to_information_security/homeworks/HW1-of-Introduction-to-Information-Security/monoalphabetic_cipher/cmake-build-debug/CMakeFiles /Users/stybill/Desktop/introduction_to_information_security/homeworks/HW1-of-Introduction-to-Information-Security/monoalphabetic_cipher/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/stybill/Desktop/introduction_to_information_security/homeworks/HW1-of-Introduction-to-Information-Security/caesar_cipher/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/stybill/Desktop/introduction_to_information_security/homeworks/HW1-of-Introduction-to-Information-Security/monoalphabetic_cipher/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named HW_1
+# Target rules for targets named monoalphabetic_cipher
 
 # Build rule for target.
-HW_1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 HW_1
-.PHONY : HW_1
+monoalphabetic_cipher: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 monoalphabetic_cipher
+.PHONY : monoalphabetic_cipher
 
 # fast build rule for target.
-HW_1/fast:
-	$(MAKE) -f CMakeFiles/HW_1.dir/build.make CMakeFiles/HW_1.dir/build
-.PHONY : HW_1/fast
+monoalphabetic_cipher/fast:
+	$(MAKE) -f CMakeFiles/monoalphabetic_cipher.dir/build.make CMakeFiles/monoalphabetic_cipher.dir/build
+.PHONY : monoalphabetic_cipher/fast
 
 main.o: main.cpp.o
 
@@ -129,7 +129,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/HW_1.dir/build.make CMakeFiles/HW_1.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/monoalphabetic_cipher.dir/build.make CMakeFiles/monoalphabetic_cipher.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -138,7 +138,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/HW_1.dir/build.make CMakeFiles/HW_1.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/monoalphabetic_cipher.dir/build.make CMakeFiles/monoalphabetic_cipher.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -147,7 +147,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/HW_1.dir/build.make CMakeFiles/HW_1.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/monoalphabetic_cipher.dir/build.make CMakeFiles/monoalphabetic_cipher.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -158,7 +158,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... HW_1"
+	@echo "... monoalphabetic_cipher"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
