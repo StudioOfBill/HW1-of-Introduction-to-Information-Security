@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++   -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/vernam_proposed_the_autokey_system.dir/main.cpp.o  -o vernam_proposed_the_autokey_system 

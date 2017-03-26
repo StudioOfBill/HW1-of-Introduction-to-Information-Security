@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/stybill/Desktop/introduction_to_information_security/homeworks/HW1-of-Introduction-to-Information-Security/vernam_proposed_the_autokey_system/main.cpp
+iostream
+-
+fstream
+-
+

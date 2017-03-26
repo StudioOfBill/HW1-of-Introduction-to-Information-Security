@@ -4,7 +4,7 @@
 Licensed under the MIT License;
 ==============================================================================*/
 
-//Monoalphabetic cipher
+//Vernam proposed the autokey system
 
 
 #include <iostream>
@@ -26,7 +26,7 @@ string get_key() {
 }
 
 void encrypt(string key) {
-    const int SIZE = 1024;
+    const int SIZE = sizeof(key) * 128;
     char buffer[SIZE];
 
     ifstream plaintext("Plaintext.txt");
@@ -42,10 +42,13 @@ void encrypt(string key) {
 
         for (int i = 0; buffer[i] != NULL; ++i) {
             if (buffer[i] > 96) {
-                ciphertext << key[buffer[i] - 97];
-            } else {
-                ciphertext << (char)(key.find(buffer[i]) + 97);
+                buffer[i] -= 32;
             }
+            buffer[i] -= 65;
+        }
+
+        for (int i = 0; buffer[i] != NULL; ++i) {
+            ciphertext << (char)(((buffer[i] + (key[i % key.size()] - 65)) % 25) + 65);
         }
     }
 
@@ -54,7 +57,7 @@ void encrypt(string key) {
 }
 
 void decrypt(string key) {
-    const int SIZE = 1024;
+    const int SIZE = sizeof(key) * 128;
     char buffer[SIZE];
 
     ifstream ciphertext("Ciphertext.txt");
@@ -69,11 +72,11 @@ void decrypt(string key) {
         ciphertext.getline(buffer, 1e3);
 
         for (int i = 0; buffer[i] != NULL; ++i) {
-            if (buffer[i] > 96) {
-                plaintext << key[buffer[i] - 97];
-            } else {
-                plaintext << (char)(key.find(buffer[i]) + 97);
-            }
+            buffer[i] -= 65;
+        }
+
+        for (int i = 0; buffer[i] != NULL; ++i) {
+            plaintext << (char)(((buffer[i] - (key[i % key.size()] - 65) + 25) % 25) + 97);
         }
     }
 

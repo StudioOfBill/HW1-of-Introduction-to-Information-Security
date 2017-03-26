@@ -4,7 +4,7 @@
 Licensed under the MIT License;
 ==============================================================================*/
 
-//Monoalphabetic cipher
+//Row transposition
 
 
 #include <iostream>
@@ -40,11 +40,11 @@ void encrypt(string key) {
     while (!plaintext.eof()) {
         plaintext.getline(buffer, 1e3);
 
-        for (int i = 0; buffer[i] != NULL; ++i) {
-            if (buffer[i] > 96) {
-                ciphertext << key[buffer[i] - 97];
-            } else {
-                ciphertext << (char)(key.find(buffer[i]) + 97);
+        for (int i = 0; i < key.size(); ++i) {
+            for (int j = 0; buffer[j] != NULL; ++j) {
+                if ((j % key.size()) == key.find(i + 49)) {
+                    ciphertext << buffer[j];
+                }
             }
         }
     }
@@ -68,11 +68,9 @@ void decrypt(string key) {
     while (!ciphertext.eof()) {
         ciphertext.getline(buffer, 1e3);
 
-        for (int i = 0; buffer[i] != NULL; ++i) {
-            if (buffer[i] > 96) {
-                plaintext << key[buffer[i] - 97];
-            } else {
-                plaintext << (char)(key.find(buffer[i]) + 97);
+        for (int j = 0; j < 2; ++j) {
+            for (int i = 0; i < key.size(); ++i) {
+                plaintext << buffer[(key[i] - 49) * 2 + j];
             }
         }
     }
@@ -86,7 +84,7 @@ int main() {
     //encrypt(get_key());
 
     //decryption function
-    //decrypt(get_key());
+    decrypt(get_key());
 
     return 0;
 }

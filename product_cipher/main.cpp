@@ -4,28 +4,30 @@
 Licensed under the MIT License;
 ==============================================================================*/
 
-//Monoalphabetic cipher
+//Product cipher
 
 
 #include <iostream>
 #include <fstream>
 using namespace std;
 
-string get_key() {
-    ifstream key_file("Key.txt");
-    if (!key_file.is_open()) {
-        cout << "Error opening key file";
-        exit (1);
-    }
+int key[16] = {15, 11, 2, 10, 16, 3, 7, 14, 4, 12, 9, 06, 01, 05, 8, 13};
 
-    string key;
-    key_file >> key;
-    key_file.close();
+//void get_key() {
+//    ifstream key_file("Key.txt");
+//    if (!key_file.is_open()) {
+//        cout << "Error opening key file";
+//        exit (1);
+//    }
+//
+//    for (int i = 1; i < 17; ++i) {
+//        key_file.operator>>(key[i]);
+//    }
+//
+//    key_file.close();
+//}
 
-    return key;
-}
-
-void encrypt(string key) {
+void encrypt() {
     const int SIZE = 1024;
     char buffer[SIZE];
 
@@ -41,11 +43,7 @@ void encrypt(string key) {
         plaintext.getline(buffer, 1e3);
 
         for (int i = 0; buffer[i] != NULL; ++i) {
-            if (buffer[i] > 96) {
-                ciphertext << key[buffer[i] - 97];
-            } else {
-                ciphertext << (char)(key.find(buffer[i]) + 97);
-            }
+            ciphertext << buffer[key[i] - 1];
         }
     }
 
@@ -53,7 +51,7 @@ void encrypt(string key) {
     ciphertext.close();
 }
 
-void decrypt(string key) {
+void decrypt() {
     const int SIZE = 1024;
     char buffer[SIZE];
 
@@ -67,13 +65,14 @@ void decrypt(string key) {
 
     while (!ciphertext.eof()) {
         ciphertext.getline(buffer, 1e3);
+        char temp[16];
 
         for (int i = 0; buffer[i] != NULL; ++i) {
-            if (buffer[i] > 96) {
-                plaintext << key[buffer[i] - 97];
-            } else {
-                plaintext << (char)(key.find(buffer[i]) + 97);
-            }
+            temp[key[i] - 1] = buffer[i];
+        }
+
+        for (int i = 0; i < 16; ++i) {
+            plaintext << temp[i];
         }
     }
 
@@ -83,10 +82,10 @@ void decrypt(string key) {
 
 int main() {
     //encryption function
-    //encrypt(get_key());
+    //encrypt();
 
     //decryption function
-    //decrypt(get_key());
+    decrypt();
 
     return 0;
 }
